@@ -35,6 +35,7 @@ def testfun3(n):
     pi = xi*0-1
     qi = xi*0
     ri = xi*0+1
+    fi = xi*0+1
     boundary = np.array([[1, 0, 0],
                          [-1, 1, 2]])
 
@@ -68,11 +69,10 @@ def difapp(pi,qi,ri,fi,boundary,h,funtype,n):
     tridiag(matrix,n)
 
 
-def tridiag[matrix,n]:
+def tridiag(matrix,n):
     ti, si, y = (np.zeros(n) for i in range(3))
     si[0] = -1*matrix[0][2]/matrix[0][1]
     ti[0] = matrix[0][3]/matrix[0][1]
-    si[0] = 0
     for i in range(1,n):
         si[i] = matrix[i][2]/(matrix[i][1]-matrix[i][0]*si[i-1])
         ti[i] = (matrix[i][0]*ti[i-1] - matrix[i][3])/(matrix[i][1]-matrix[i][0]*si[i-1])
